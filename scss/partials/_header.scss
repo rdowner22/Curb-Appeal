@@ -1,0 +1,174 @@
+/* Top Header
+------------------------------------------------------------------------- */
+.top-header.contain-to-grid {
+	background: #e9e9e9;
+	color: $body-font-color;
+	font-size: rem-calc(12);
+	line-height: rem-calc(20);
+}
+.top-header a,
+.top-header i.fas,
+.top-header i.fab {
+	color: $body-font-color;
+	@include single-transition(color);
+}
+.top-header a:hover {
+	color: scale-color($body-font-color, $lightness: -14%);
+}
+.top-header .agent-social-icons a {
+	font-size: rem-calc(16);
+	margin: 0 1rem 0 0;
+}
+.top-header ul {
+	font-size: rem-calc(12);
+	margin: 0;
+}
+.top-header ul.menu li {
+	list-style-type: none;
+	display: inline-block;
+	margin: 0 5px;
+}
+.top-header .widget-area {
+	height: 30px;
+}
+.top-header .widget-area ul {
+	line-height: 30px;
+}
+@media #{$small-only} {
+	.top-header-left,
+	.top-header-right {
+		text-align: center;
+	}
+}
+@media #{$medium-up} {
+	.top-header .agent-social-icons {
+		float: right;
+		display: inline-block;
+	}
+	.top-header .agent-social-icons a {
+		font-size: rem-calc(12);
+		margin: 0 6px 0 0;
+	}
+}
+
+
+/* Header
+------------------------------------------------------------------------- */
+header.site-header {
+	background: #fff;
+	padding: 0.65rem 0;
+	color: $body-font-color;
+}
+header.site-header .title-area,
+header.site-header .widget-area {
+	text-align: center;
+}
+header.site-header .site-title {
+	font-family: $header-font-family;
+	font-size: rem-calc(38);
+	line-height: 1;
+	margin: 0 0 .5rem;
+}
+header .site-title a,
+header .site-title a:hover {
+	color: $body-font-color;
+}
+header.site-header .site-description {
+	display: none;
+	font-family: $body-font-family;
+	font-size: rem-calc(13);
+	font-weight: $body-font-weight;
+	margin: .5rem 0 0 0;
+	line-height: 1.6;
+}
+.sticky-header.sticky {
+	top: 0;
+	position: fixed;
+	background: #fff;
+	width: 100%;
+	z-index: 100;
+	border-bottom: 1px solid #D8D8D8;
+}
+@media #{$medium-up} {
+	body.admin-bar .sticky-header.sticky {
+		top: 32px;
+	}
+}
+.sticky-header.sticky header.site-header .site-title {
+	font-size: rem-calc(30);
+}
+.sticky-header.sticky header.site-header .site-description {
+	font-size: rem-calc(12)
+}
+.sticky-header.sticky .top-header,
+.sticky-header.sticky .top-header .widget-area,
+.sticky-header.sticky header.site-header .site-title,
+.sticky-header.sticky header.site-header .site-description,
+.sticky-header.sticky .header-widget-area .agent-phone-wrap,
+.sticky-header.sticky .header-widget-area .agent-email-wrap,
+.sticky-header.sticky .contain-to-grid,
+.sticky-header.sticky header.site-header,
+.sticky-header.sticky header.title-area,
+.sticky-header.sticky header.widget-area,
+.sticky-header.sticky nav.nav-main {
+	@include single-transition(all, 500ms, ease-in-out);
+}
+.sticky-header.sticky {
+	z-index: 10000;
+}
+.sticky-header.sticky .top-header,
+.sticky-header.sticky .top-header .widget-area,
+.sticky-header.sticky .top-header .widget-area li,
+.sticky-header.sticky .top-header .widget-area .agent-social-icons a  {
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+}
+
+@media #{$medium-up} {
+	header.site-header {
+		padding: 1rem 0;
+	}
+
+}
+@media #{$large-up} {
+	header.site-header .site-title {
+		margin-bottom: 0;
+	}
+	header.site-header .title-area {
+		text-align: left;
+	}
+	header.site-header .widget-area {
+		text-align: right;
+	}
+}
+
+/* Header Right
+--------------------------------------------- */
+.header-widget-area .agent-phone-wrap,
+.header-widget-area .agent-email-wrap {
+	margin-bottom: 0;
+	font-size: rem-calc(12);
+}
+.header-widget-area .agent-phone-wrap a,
+.header-widget-area .agent-email-wrap a {
+	color: $body-font-color;
+}
+.header-widget-area .agent-phone-wrap,
+.header-widget-area .agent-email-wrap {
+	font-size: rem-calc(14);
+}
+.sticky-header.sticky .header-widget-area .agent-phone-wrap,
+.sticky-header.sticky .header-widget-area .agent-email-wrap {
+	font-size: rem-calc(12);
+}
+
+/* Main Nav
+--------------------------------------------- */
+.top-bar-section ul li > a {
+	font-family: $header-font-family;
+}
+.top-bar-section ul li > ul > li > a {
+	font-size: rem-calc(18);
+}
+.top-bar.expanded .toggle-topbar a span:after {box-shadow: 0 0 0 1px,0 7px 0 1px,0 14px 0 1px;}
